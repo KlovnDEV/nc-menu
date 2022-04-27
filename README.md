@@ -21,7 +21,7 @@ RegisterCommand("qbmenutest", function(source, args, raw)
         {
             header = "Main Title",
             isMenuHeader = true, -- Set to true to make a nonclickable title
-            icon = "fas fa-gas-pump", -- Set this to any fontawesome icon!
+            icon = "lockpick", -- Set this to any item named in the shared
         },
         {
             header = "Sub Menu Button",
