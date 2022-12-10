@@ -1,4 +1,4 @@
-# qb-menu
+# nc-menu
 Menu System for the QBCore Framework, Edited to look like NoPixel with Fontawesome icons supported
 
 This is a modified version of **[NH Context](https://forum.cfx.re/t/no-longer-supported-standalone-nerohiro-s-context-menu-dynamic-event-firing-menu/2564083)** by **[NeroHiro](https://github.com/nerohiro)**
@@ -28,7 +28,7 @@ RegisterCommand("qbmenutest", function(source, args, raw)
             header = "Sub Menu Button",
             txt = "This goes to a sub menu",
             params = {
-                event = "qb-menu:client:testMenu2",
+                event = "nc-menu:client:testMenu2",
                 args = {
                     number = 1,
                 }
@@ -40,7 +40,7 @@ RegisterCommand("qbmenutest", function(source, args, raw)
             disabled = true,
             -- hidden = true, -- doesnt create this at all if set to true
             params = {
-                event = "qb-menu:client:testMenu2",
+                event = "nc-menu:client:testMenu2",
                 args = {
                     number = 1,
                 }
@@ -50,7 +50,7 @@ RegisterCommand("qbmenutest", function(source, args, raw)
 end)
 ```
 ```
-RegisterNetEvent('qb-menu:client:testMenu2', function(data)
+RegisterNetEvent('nc-menu:client:testMenu2', function(data)
     local number = data.number
     openMenu({
         {
@@ -60,7 +60,7 @@ RegisterNetEvent('qb-menu:client:testMenu2', function(data)
             header = "Number: "..number,
             txt = "Other",
             params = {
-                event = "qb-menu:client:testButton",
+                event = "nc-menu:client:testButton",
                 args = {
                     message = "This was called by clicking this button"
                 }
@@ -70,7 +70,7 @@ RegisterNetEvent('qb-menu:client:testMenu2', function(data)
 end)
 ```
 ```
-RegisterNetEvent('qb-menu:client:testButton', function(data)
+RegisterNetEvent('nc-menu:client:testButton', function(data)
     TriggerEvent('QBCore:Notify', data.message)
 end)
 ```
